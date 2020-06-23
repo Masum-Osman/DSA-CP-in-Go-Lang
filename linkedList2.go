@@ -6,7 +6,7 @@ type node2 struct {
 	next *node2
 }
 
-func main()  {
+func main7()  {
 	var link *node2
 	var testCase int;
 	var data int;
