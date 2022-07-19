@@ -1,0 +1,57 @@
+devider func--  [10 6 2 1 5 8 3 4 7 9]
+devider func--  [10 6 2 1 5]
+devider func--  [10 6]
+devider func--  [10]
+Inside IF? true
+firstHalf--  [10]
+devider func--  [6]
+Inside IF? true
+secondHalf--  [6]
+conquerer func--  [10] [6]
+firstHalf--  [6 10]
+devider func--  [2 1 5]
+devider func--  [2]
+Inside IF? true
+firstHalf--  [2]
+devider func--  [1 5]
+devider func--  [1]
+Inside IF? true
+firstHalf--  [1]
+devider func--  [5]
+Inside IF? true
+secondHalf--  [5]
+conquerer func--  [1] [5]
+secondHalf--  [1 5]
+conquerer func--  [2] [1 5]
+secondHalf--  [1 2 5]
+conquerer func--  [6 10] [1 2 5]
+firstHalf--  [1 2 5 6 10]
+devider func--  [8 3 4 7 9]
+devider func--  [8 3]
+devider func--  [8]
+Inside IF? true
+firstHalf--  [8]
+devider func--  [3]
+Inside IF? true
+secondHalf--  [3]
+conquerer func--  [8] [3]
+firstHalf--  [3 8]
+devider func--  [4 7 9]
+devider func--  [4]
+Inside IF? true
+firstHalf--  [4]
+devider func--  [7 9]
+devider func--  [7]
+Inside IF? true
+firstHalf--  [7]
+devider func--  [9]
+Inside IF? true
+secondHalf--  [9]
+conquerer func--  [7] [9]
+secondHalf--  [7 9]
+conquerer func--  [4] [7 9]
+secondHalf--  [4 7 9]
+conquerer func--  [3 8] [4 7 9]
+secondHalf--  [3 4 7 8 9]
+conquerer func--  [1 2 5 6 10] [3 4 7 8 9]
+[1 2 3 4 5 6 7 8 9 10]
