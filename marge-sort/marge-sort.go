@@ -4,28 +4,28 @@ import "fmt"
 
 func main() {
 	unsorted := []int{10, 6, 2, 1, 5, 8, 3, 4, 7, 9}
-	sorted := mergeSort(unsorted)
+	sorted := devide(unsorted)
 
 	fmt.Println(sorted)
 }
 
-func mergeSort(items []int) []int {
-	fmt.Println("counter-- ", items)
+func devide(items []int) []int {
+	fmt.Println("devider func-- ", items)
 
 	if len(items) < 2 {
 		fmt.Println("Inside IF?", len(items) < 2)
 		return items
 	}
-	firstHalf := mergeSort(items[:len(items)/2])
-	fmt.Println("firstHalf-- ", firstHalf)
-	secondHalf := mergeSort(items[len(items)/2:])
-	fmt.Println("secondHalf-- ", secondHalf)
+	// firstHalf := devide(items[:len(items)/2])
+	// fmt.Println("firstHalf-- ", firstHalf)
+	// secondHalf := devide(items[len(items)/2:])
+	// fmt.Println("secondHalf-- ", secondHalf)
 
-	return mergeThemToOne(firstHalf, secondHalf)
+	return conquer(devide(items[:len(items)/2]), devide(items[len(items)/2:]))
 }
 
-func mergeThemToOne(a, b []int) []int {
-	fmt.Println("Merger-- ", a, b)
+func conquer(a, b []int) []int {
+	fmt.Println("conquerer func-- ", a, b)
 
 	final := []int{}
 	i := 0
