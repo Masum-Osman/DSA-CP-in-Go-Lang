@@ -16,10 +16,6 @@ func devide(items []int) []int {
 		fmt.Println("Inside IF?", len(items) < 2)
 		return items
 	}
-	// firstHalf := devide(items[:len(items)/2])
-	// fmt.Println("firstHalf-- ", firstHalf)
-	// secondHalf := devide(items[len(items)/2:])
-	// fmt.Println("secondHalf-- ", secondHalf)
 
 	return conquer(devide(items[:len(items)/2]), devide(items[len(items)/2:]))
 }
