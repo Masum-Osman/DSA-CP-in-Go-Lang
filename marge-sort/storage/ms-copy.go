@@ -19,4 +19,6 @@ func devideAndConquer(arr []int) []int {
 
 func sortAndMerge(a, b []int) []int {
 	sorted := [10]
+
+	return sorted
 }
