@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type TreeNode struct {
 	Data  int
@@ -46,4 +48,5 @@ func main() {
 
 	fmt.Println("Pre-order traversal of Tree: ")
 	PreOrder(N1)
+
 }
