@@ -8,6 +8,36 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+ func rangeSumBST(root *TreeNode, low int, high int) int {
+	sum := 0
+
+	return helper(root, low, high, &sum)
+}
+
+func helper(root *TreeNode, low int, high int, sum *int) int {
+	if root == nil {
+		return 0
+	}
+	if root.Val >= low && root.Val <= high {
+        *sum = *sum + root.Val
+	}
+	helper(root.Left, low, high, sum)
+	helper(root.Right, low, high, sum)
+    
+    return *sum
+}
+
+// -------------------------------------------------------------
+
 func rangeSumBST0(root *TreeNode, low int, high int) int {
 	if root == nil {
 		return 0
@@ -24,14 +54,16 @@ func rangeSumBST0(root *TreeNode, low int, high int) int {
 	return sum
 }
 
+// ------------------------------------------------------------------
+
 func rangeSumBST1(root *TreeNode, low int, high int) int {
 	// make a slice:
-	var sum []int
+	sum := 0
 
-	helper(root*TreeNode, low, high, sum)
+	helper(root , low, high, &sum)
 }
 
-func helper(root *TreeNode, low int, high int, arrSum []int) []int {
+func helper(root *TreeNode, low int, high int, *sum int)  {
 	if root == nil {
 		return 0
 	}
