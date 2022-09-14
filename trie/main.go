@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 const AlphabetSize = 26
 
 type Node struct {
@@ -17,4 +19,16 @@ func InitTrie() *Trie {
 	}
 
 	return result
+}
+
+func (t *Trie) InsertWord(w string) {
+	wordLength := len(w)
+	currentNode := t.root
+
+	fmt.Println(wordLength, currentNode)
+}
+
+func main() {
+	goTrie := InitTrie()
+	fmt.Println(testTrie)
 }
