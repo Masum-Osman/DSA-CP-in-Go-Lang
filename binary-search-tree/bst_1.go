@@ -46,6 +46,15 @@ func (root *BST) IfContainsBST(data int) bool {
 	return true
 }
 
+func BSTTraversal(root *BST) {
+	if root == nil {
+		return
+	}
+	fmt.Printf("%d ", root.Val)
+	BSTTraversal(root.Left)
+	BSTTraversal(root.Right)
+}
+
 func main() {
 	bst := &BST{Val: 100}
 
@@ -62,14 +71,15 @@ func main() {
 	bst.InsertBST(9)
 	bst.InsertBST(87)
 	bst.InsertBST(36)
-	bst.InsertBST(2635)
+	bst.InsertBST(263)
 	bst.InsertBST(89)
 	bst.InsertBST(636)
 	bst.InsertBST(66)
 	bst.InsertBST(78)
 	bst.InsertBST(6)
 
-	fmt.Println(bst)
+	BSTTraversal(bst)
+	fmt.Println("\nTraversing Done")
 	fmt.Println(bst.IfContainsBST(66))
 	fmt.Println(count)
 }
