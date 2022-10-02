@@ -70,5 +70,4 @@ func main() {
 
 	fmt.Println(goTrie.Search("oreo"))
 
-	fmt.Println(goTrie.root)
 }
