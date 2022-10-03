@@ -26,9 +26,9 @@ func (s *Stack) Push(data string) {
 }
 
 func (s *Stack) TopValue() string {
-	if len(*s) == 0 {
-		return
-	}
+	// if len(*s) == 0 {
+	// 	return
+	// }
 	index := len(*s) - 1
 	return (*s)[index]
 }
